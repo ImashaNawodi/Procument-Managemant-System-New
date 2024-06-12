@@ -19,7 +19,7 @@ import AddItem from "./pages/admin/items/AddItem.jsx";
 import FormView from "./pages/department/FormView.jsx";
 import { AddItemCard } from "./pages/department/AddItemCard .jsx";
 import UploadNotice from "./pages/admin/notices/UploadNotice.jsx";
-import ViewNotice from "./pages/admin/notices/ViewNotice.jsx";
+import ViewNotice from "./pages/admin/notices/viewNoticePdf.jsx";
 import ManageNotices from "./pages/admin/notices/ManageNotices.jsx";
 import AddSupplier from "./pages/admin/vendors/AddSupplier.jsx";
 import AddItems from "./pages/admin/items/Additems.jsx";
@@ -61,7 +61,7 @@ import ContextWrapper from "./context/ContextWrapper.js";
 import ViewVendorDetails from "./pages/generalUsers/ViewVenderDetails.jsx";
 import ProjectList from "./pages/PO_BU/ProjectList.jsx";
 import {ViewShippingPdf} from "./pages/PO_BU/ViewBidDocumnet.jsx"
-
+import ViewNoticePdf from "./pages/admin/notices/viewNoticePdf.jsx";
 
 const App = () => {
   const navigate = useNavigate(); // Initialize the useNavigate hook
@@ -246,7 +246,7 @@ const App = () => {
         <Route path="/projectList" element={<ProjectList/>}/>
           
           <Route path="/EventPlanner" element={<ContextWrapper><EventPlanner />  </ContextWrapper>} />
-        
+          <Route path="/viewNoticePdf/:noticeId" element={<ViewNoticePdf />} />
          
       </Routes>
 
