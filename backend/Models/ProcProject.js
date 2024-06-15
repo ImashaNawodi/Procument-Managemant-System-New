@@ -37,7 +37,7 @@ const procProjectSchema = new Schema({
   biddingType: {
     type: String,
     default: "Direct Purchasing",
-    enum: ["", "Direct Purchasing", "Shopping Method", "National Competitive Method (NCB)", "International Competitive Bidding (ICB)"],
+    enum: ["", "Direct Purchasing", "Shopping Method"],
   },
   closingDate: { type: Date },
   closingTime: { type: Date },

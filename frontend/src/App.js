@@ -60,8 +60,9 @@ import EventPlanner from "./pages/admin/eventPlanner/EventPlanner.jsx";
 import ContextWrapper from "./context/ContextWrapper.js";
 import ViewVendorDetails from "./pages/generalUsers/ViewVenderDetails.jsx";
 import ProjectList from "./pages/PO_BU/ProjectList.jsx";
-import {ViewShippingPdf} from "./pages/PO_BU/ViewBidDocumnet.jsx"
+import {ViewShoppingPdf} from "./pages/PO_BU/ViewShoppingPdf.jsx"
 import ViewNoticePdf from "./pages/admin/notices/viewNoticePdf.jsx";
+import { ViewDirectPurchasingPdf } from "./pages/PO_BU/ViewDirectPurchasingPdf.jsx";
 
 const App = () => {
   const navigate = useNavigate(); // Initialize the useNavigate hook
@@ -226,7 +227,8 @@ const App = () => {
         />
         <Route path="/ProjectCreationForm/" element={<ProjectCreationForm />} />
         <Route path="/ReqSelection/:projectId" element={<AddReqCard/>} />
-        <Route path="/ViewPdf/:projectId" element={<ViewShippingPdf />} />
+        <Route path="/ViewShoppingPdf/:projectId" element={<ViewShoppingPdf />} />
+        <Route path="/ViewDirectPurchasingPdf/:projectId" element={<ViewDirectPurchasingPdf />} />
 
         <Route
           path="/PO_BuHome/:id"
